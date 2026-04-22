@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# 🚀 COMMAND: make run
+# 
+# Use isto:
+#   make run         - Rodar tudo
+#   make setup       - Setup inicial  
+#   make check       - Verificar tudo
+#   make dashboard   - Monitor tempo real
+#   make clean       - Limpar temporários
+#   make help        - Ver ajuda
+
+if [ "$1" == "" ]; then
+    make help
+    exit 0
+fi

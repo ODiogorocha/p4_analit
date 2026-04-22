@@ -1,0 +1,52 @@
+╔════════════════════════════════════════════════════════════════╗
+║         🚀 SISTEMA DE ANÁLISE DE TRÁFEGO COM PHI3 LLM          ║
+║                    GUIA RÁPIDO                                  ║
+╚════════════════════════════════════════════════════════════════╝
+
+📋 TRÊS PASSOS PARA RODAR:
+
+1️⃣  SETUP (primeira vez):
+    $ make setup
+
+2️⃣  OLLAMA (novo terminal):
+    $ ollama serve
+
+3️⃣  RODAR TUDO:
+    $ make run
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 COMANDOS PRINCIPAIS:
+
+    make run         ← RODAR TUDO (principal)
+    make setup       ← Setup inicial
+    make check       ← Verificar dependências  
+    make clean       ← Limpar temporários
+    make help        ← Ver ajuda
+    make dashboard   ← Monitor tempo real (novo terminal)
+
+═══════════════════════════════════════════════════════════════════
+
+📊 MONITORAR EM TEMPO REAL:
+
+Em outro terminal enquanto `make run` está rodando:
+    $ python3 dashboard.py --interactive
+
+═══════════════════════════════════════════════════════════════════
+
+✅ SAÍDA GERADA:
+
+    telemetry_storage.json   - Métricas coletadas
+    decisions.json           - Decisões do LLM
+    rules_applied.json       - Regras aplicadas
+    analysis_report.json     - Relatório final
+    orchestrator.log         - Log detalhado
+
+═══════════════════════════════════════════════════════════════════
+
+❓ PROBLEMAS?
+
+    tail -50 orchestrator.log     ← Ver log de erros
+    python3 verify_setup.py       ← Validar setup
+
+═══════════════════════════════════════════════════════════════════

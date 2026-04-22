@@ -1,0 +1,6 @@
+{
+  "total_telemetries": 161,
+  "avg_latency_ms": 167.68,
+  "min_latency_ms": 0.02,
+  "max_latency_ms": 1016.09
+}

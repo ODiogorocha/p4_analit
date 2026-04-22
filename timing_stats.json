@@ -1,0 +1,39 @@
+{
+  "start_time": "2026-04-22T12:48:26.842719",
+  "elapsed_seconds": 12.04,
+  "components": {
+    "system": {
+      "start_at": 0.0,
+      "events_count": 5,
+      "events": [
+        {
+          "event": "start",
+          "timestamp": 3.814697265625e-06,
+          "data": {
+            "duration": 120
+          }
+        },
+        {
+          "event": "ollama_ok",
+          "timestamp": 0.02827763557434082,
+          "data": {}
+        },
+        {
+          "event": "controller_started",
+          "timestamp": 2.030212640762329,
+          "data": {}
+        },
+        {
+          "event": "brain_llm_started",
+          "timestamp": 4.032441139221191,
+          "data": {}
+        },
+        {
+          "event": "traffic_started",
+          "timestamp": 12.043388605117798,
+          "data": {}
+        }
+      ]
+    }
+  }
+}

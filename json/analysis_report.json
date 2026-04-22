@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-04-12T21:44:55.808853",
+  "duration_s": 132.22364020347595,
+  "files": {
+    "telemetry_storage.json": {
+      "description": "Telemetria coletada",
+      "records": 140,
+      "size_kb": 146.04296875
+    },
+    "decisions.json": {
+      "description": "Decis\u00f5es LLM",
+      "records": 8,
+      "size_kb": 1.9375
+    },
+    "metrics_history.json": {
+      "description": "Hist\u00f3rico de m\u00e9tricas",
+      "records": 9,
+      "size_kb": 1.6904296875
+    }
+  }
+}
