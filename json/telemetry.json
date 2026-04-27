@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-04-23T16:04:38.750437",
+  "elephant_flows": [
+    {
+      "src_ip": "10.0.0.108",
+      "dst_ip": "10.0.0.101",
+      "bytes": 500968,
+      "packets": 829,
+      "duration": 180.79370975494385,
+      "avg_packet_size": 604.3039806996381,
+      "detection_time": 180.7935767173767,
+      "timestamp": 1776971078.6401808
+    }
+  ],
+  "agent_metrics": {
+    "agent_start_time": 1776970897.7374322,
+    "detection_timestamp": 1776971078.7425919,
+    "total_packets_captured": 2335,
+    "total_bytes_captured": 1493470,
+    "active_flows": 26,
+    "reported_flows": 1,
+    "system_metrics": {
+      "cpu_percent": 11.4,
+      "memory_percent": 35.9,
+      "network_bytes_sent": 2854244772,
+      "network_bytes_recv": 6410355697
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-04-24T15:19:33.250640",
+  "detection_id": 1082,
+  "elephant_flow": {
+    "src_ip": "10.0.0.108",
+    "dst_ip": "10.0.0.101",
+    "bytes": 670230,
+    "packets": 3487,
+    "duration": 13038.394308567047,
+    "avg_packet_size": 192.20820189274448,
+    "detection_time": 13038.393940448761,
+    "timestamp": 1777054773.0876915
+  },
+  "decision": {},
+  "timing": {},
+  "ollama_time": 600
+}

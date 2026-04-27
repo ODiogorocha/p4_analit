@@ -61,15 +61,11 @@ def process_with_ollama(flows):
         
         if not elephants:
             print("ℹ️ Nenhum elephant flow detectado")
+            # Salva decisão mesmo assim
             decision = {
                 "timestamp": datetime.now().isoformat(),
                 "status": "no_elephant_flows",
-                "message": "Nenhum elephant flow detectado",
-                "decision": {
-                    "action": "ignorar",
-                    "reason": "Tráfego dentro do threshold normal",
-                    "priority": "baixa"
-                }
+                "message": "Nenhum elephant flow detectado"
             }
             with open(DECISIONS_FILE, "w") as f:
                 json.dump(decision, f, indent=2)
@@ -79,33 +75,18 @@ def process_with_ollama(flows):
         print(f"🐘 Processando {len(elephants)} elephant flows com Ollama")
         print(f"   Detalhes: {json.dumps(elephants, indent=2)}")
         
-        # Prepara prompt para o Ollama com as novas ações
+        # Prepara prompt para o Ollama
         prompt = f"""
         Você é um sistema de gerenciamento de rede. Analise estes elephant flows:
         
         {json.dumps(elephants, indent=2)}
         
-        Baseado na análise, escolha UMA das seguintes ações:
-        
-        1. "marcar" - Marcar o flow para monitoramento especial
-        2. "encaminhar" - Encaminhar para outra rota ou fila
-        3. "dropar" - Bloquear completamente o flow
-        4. "ignorar" - Não fazer nada, tráfego normal
-        
-        Responda APENAS com um JSON no formato exato:
+        Responda APENAS com um JSON no formato:
         {{
-            "action": "marcar" ou "encaminhar" ou "dropar" ou "ignorar",
-            "reason": "explicação detalhada do motivo da decisão",
-            "priority": "alta" ou "media" ou "baixa",
-            "bandwidth_mbps": "valor em Mbps se for limitar, ou null",
-            "suggested_route": "rota sugerida se for encaminhar, ou null"
+            "action": "drop" ou "limit" ou "monitor",
+            "reason": "breve explicação",
+            "priority": "alta" ou "media" ou "baixa"
         }}
-        
-        Regras:
-        - Use "dropar" apenas para tráfego malicioso ou muito agressivo
-        - Use "encaminhar" para tráfego que pode ser redirecionado
-        - Use "marcar" para tráfego que precisa de monitoramento
-        - Use "ignorar" para tráfego normal dentro dos limites
         """
         
         # Chama Ollama
@@ -118,7 +99,7 @@ def process_with_ollama(flows):
                 "stream": False,
                 "options": {
                     "temperature": 0.3,
-                    "num_predict": 200
+                    "num_predict": 150
                 }
             },
             timeout=120
@@ -130,7 +111,7 @@ def process_with_ollama(flows):
         if response.status_code == 200:
             result = response.json()
             ollama_response = result.get("response", "")
-            print(f"📝 Resposta do Ollama: {ollama_response[:300]}")
+            print(f"📝 Resposta do Ollama: {ollama_response[:200]}")
             
             # Tenta extrair JSON da resposta
             try:
@@ -139,27 +120,17 @@ def process_with_ollama(flows):
                 if json_match:
                     decision_data = json.loads(json_match.group())
                 else:
-                    # Resposta padrão
                     decision_data = {
-                        "action": "ignorar",
-                        "reason": "Não foi possível determinar ação",
-                        "priority": "media",
-                        "bandwidth_mbps": None,
-                        "suggested_route": None
+                        "action": "monitor",
+                        "reason": ollama_response[:200],
+                        "priority": "media"
                     }
             except:
                 decision_data = {
-                    "action": "marcar",
+                    "action": "monitor",
                     "reason": ollama_response[:200],
-                    "priority": "media",
-                    "bandwidth_mbps": None,
-                    "suggested_route": None
+                    "priority": "media"
                 }
-            
-            # Garante que a ação é uma das opções válidas
-            valid_actions = ["marcar", "encaminhar", "dropar", "ignorar"]
-            if decision_data.get("action") not in valid_actions:
-                decision_data["action"] = "marcar"
             
             # Salva decisão completa
             decision = {
@@ -168,17 +139,15 @@ def process_with_ollama(flows):
                 "elephant_flows": elephants,
                 "ollama_raw_response": ollama_response,
                 "decision": decision_data,
-                "model": "phi3",
-                "threshold": THRESHOLD
+                "model": "phi3"
             }
             
             with open(DECISIONS_FILE, "w") as f:
                 json.dump(decision, f, indent=2)
             
-            print(f"\n✅ Decisão salva em: {DECISIONS_FILE}")
+            print(f"✅ Decisão salva em: {DECISIONS_FILE}")
             print(f"   Ação: {decision_data.get('action', 'unknown')}")
             print(f"   Razão: {decision_data.get('reason', 'N/A')[:100]}")
-            print(f"   Prioridade: {decision_data.get('priority', 'N/A')}")
             
         else:
             print(f"❌ Ollama retornou erro: {response.status_code}")
@@ -186,7 +155,7 @@ def process_with_ollama(flows):
             
     except requests.exceptions.Timeout:
         print(f"❌ Timeout: Ollama demorou mais de 120 segundos")
-        save_error_decision(flows, "Timeout no Ollama - ação padrão: marcar")
+        save_error_decision(flows, "Timeout no Ollama")
     except Exception as e:
         print(f"❌ Erro no processamento: {e}")
         save_error_decision(flows, str(e))
@@ -198,11 +167,9 @@ def save_error_decision(flows, error_msg):
         "error": error_msg,
         "elephant_flows": flows,
         "decision": {
-            "action": "marcar",
-            "reason": f"Erro no processamento: {error_msg}. Ação padrão: marcar para análise",
-            "priority": "media",
-            "bandwidth_mbps": None,
-            "suggested_route": None
+            "action": "monitor",
+            "reason": f"Erro no processamento: {error_msg}",
+            "priority": "baixa"
         }
     }
     with open(DECISIONS_FILE, "w") as f:
@@ -242,12 +209,11 @@ def check_ollama():
 
 if __name__ == "__main__":
     print("=" * 60)
-    print("🧠 BRAIN com Ollama - Elephant Flow Manager")
+    print("🧠 BRAIN com Ollama - Sistema de Elephant Flow Detection")
     print("=" * 60)
     print(f"📡 API: http://0.0.0.0:5000")
     print(f"📂 Diretório JSON: {JSON_DIR}")
     print(f"📄 Arquivo decisões: {DECISIONS_FILE}")
-    print(f"🎯 Ações disponíveis: marcar, encaminhar, dropar, ignorar")
     print("=" * 60)
     print(f"✅ Ollama status: {'Rodando' if check_ollama() else 'Parado'}")
     print("🚀 Brain pronto para receber dados...\n")

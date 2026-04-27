@@ -1,0 +1,34 @@
+[
+  {
+    "timestamp": "2026-04-23T16:06:38.549864",
+    "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)",
+    "elephant_flows": [
+      {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 500846,
+        "packets": 896,
+        "duration": 180.4312343597412,
+        "avg_packet_size": 558.9799107142857,
+        "detection_time": 180.43116426467896,
+        "timestamp": 1776971078.2724462
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-04-23T16:06:38.864207",
+    "error": "HTTPConnectionPool(host='localhost', port=11434): Read timed out. (read timeout=120)",
+    "elephant_flows": [
+      {
+        "src_ip": "10.0.0.108",
+        "dst_ip": "10.0.0.101",
+        "bytes": 500968,
+        "packets": 829,
+        "duration": 180.79370975494385,
+        "avg_packet_size": 604.3039806996381,
+        "detection_time": 180.7935767173767,
+        "timestamp": 1776971078.6401808
+      }
+    ]
+  }
+]

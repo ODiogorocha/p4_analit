@@ -1,0 +1,3933 @@
+{
+  "summary": {
+    "total_detections": 111,
+    "avg_agent_detection": 40.40955092241098,
+    "std_agent_detection": 243.56073810121757,
+    "avg_ollama_time": 9.316889386993271,
+    "std_ollama_time": 59.20946191464353,
+    "avg_end_to_end": 49.7266326294289,
+    "std_end_to_end": 300.3887935178071,
+    "min_ollama_time": 0,
+    "max_ollama_time": 486.92111253738403
+  },
+  "detections": [
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:06:59.795514",
+      "unix_timestamp": 1777043219.7955446,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 500068,
+        "packets": 2833,
+        "duration": 1485.0081515312195,
+        "avg_packet_size": 176.51535474761738,
+        "detection_time": 1485.0078573226929,
+        "timestamp": 1777043219.702446
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043219.8048909,
+        "total_packets_captured": 9982,
+        "total_bytes_captured": 1844671,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.4,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903156300,
+          "network_bytes_recv": 6527006665
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043219.7956064,
+        "ollama_call_end": 1777043428.4858768,
+        "ollama_duration_seconds": 208.69027042388916
+      },
+      "decision": {
+        "action": "marcar",
+        "reason": "Este elephant flow tem uma dura\u00e7\u00e3o de mais de 10 minutos e um volume significativo, o que pode indicar atividade sinalizada ou maliciosa.",
+        "priority": "alta"
+      },
+      "ollama_raw_response": "```json\n{\n    \"action\": \"marcar\",\n    \"reason\": \"Este elephant flow tem uma dura\u00e7\u00e3o de mais de 10 minutos e um volume significativo, o que pode indicar atividade sinalizada ou maliciosa.\",\n    \"priority\": \"alta\"\n}\n```",
+      "timing_summary": {
+        "agent_detection_time": 1485.0078573226929,
+        "ollama_processing_time": 208.69027042388916,
+        "brain_total_time": 208.70291900634766,
+        "end_to_end_total_time": 1693.7107763290405
+      }
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:07:10.084086",
+      "unix_timestamp": 1777043230.0841622,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 500206,
+        "packets": 2834,
+        "duration": 1495.1393296718597,
+        "avg_packet_size": 176.50176429075512,
+        "detection_time": 1495.1392755508423,
+        "timestamp": 1777043229.8336222
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043229.942701,
+        "total_packets_captured": 9985,
+        "total_bytes_captured": 1845341,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.3,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903167762,
+          "network_bytes_recv": 6527029912
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043230.0843349,
+        "ollama_call_end": 1777043568.6476738,
+        "ollama_duration_seconds": 338.56333899497986
+      },
+      "decision": {
+        "action": "marking_suspicious",
+        "reason": "The flow duration of over an hour and the size exceed typical user activity, suggesting a potential DDoS attack.",
+        "priority": "high"
+      },
+      "ollama_raw_response": "```json\n{\n    \"action\": \"marking_suspicious\",\n    \"reason\": \"The flow duration of over an hour and the size exceed typical user activity, suggesting a potential DDoS attack.\",\n    \"priority\": \"high\"\n}\n```",
+      "timing_summary": {
+        "agent_detection_time": 1495.1392755508423,
+        "ollama_processing_time": 338.56333899497986,
+        "brain_total_time": 338.5698142051697,
+        "end_to_end_total_time": 1833.709089756012
+      }
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:07:20.097392",
+      "unix_timestamp": 1777043240.0974283,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 500280,
+        "packets": 2835,
+        "duration": 1505.3132553100586,
+        "avg_packet_size": 176.46560846560845,
+        "detection_time": 1505.3130195140839,
+        "timestamp": 1777043240.0075505
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043240.1085513,
+        "total_packets_captured": 9987,
+        "total_bytes_captured": 1845489,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903209849,
+          "network_bytes_recv": 6527064872
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043240.0974662,
+        "ollama_call_end": 1777043727.0185788,
+        "ollama_duration_seconds": 486.92111253738403
+      },
+      "decision": {
+        "action": "marcar",
+        "reason": "Este elephant flow tem uma dura\u00e7\u00e3o de mais de 15 minutos, o que \u00e9 incomum para tr\u00e1fego normal e pode indicar um ataque DoS ou mal uso da rede.",
+        "priority": "alta"
+      },
+      "ollama_raw_response": "```json\n{\n    \"action\": \"marcar\",\n    \"reason\": \"Este elephant flow tem uma dura\u00e7\u00e3o de mais de 15 minutos, o que \u00e9 incomum para tr\u00e1fego normal e pode indicar um ataque DoS ou mal uso da rede.\",\n    \"priority\": \"alta\"\n}\n```",
+      "timing_summary": {
+        "agent_detection_time": 1505.3130195140839,
+        "ollama_processing_time": 486.92111253738403,
+        "brain_total_time": 486.9233362674713,
+        "end_to_end_total_time": 1992.2363557815552
+      }
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:07:30.216299",
+      "unix_timestamp": 1777043250.2163498,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 500346,
+        "packets": 2836,
+        "duration": 1515.4271235466003,
+        "avg_packet_size": 176.42665726375176,
+        "detection_time": 1515.4270570278168,
+        "timestamp": 1777043250.1214159
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043250.2239246,
+        "total_packets_captured": 9991,
+        "total_bytes_captured": 1846548,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.6,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903222622,
+          "network_bytes_recv": 6527087061
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043250.2163842,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:07:40.342873",
+      "unix_timestamp": 1777043260.3428917,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 500412,
+        "packets": 2837,
+        "duration": 1525.5474543571472,
+        "avg_packet_size": 176.38773352132534,
+        "detection_time": 1525.5472421646118,
+        "timestamp": 1777043260.2417483
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043260.3526466,
+        "total_packets_captured": 9992,
+        "total_bytes_captured": 1846614,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 4.4,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903233101,
+          "network_bytes_recv": 6527107547
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043260.3429224,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:07:50.462283",
+      "unix_timestamp": 1777043270.462308,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 500806,
+        "packets": 2838,
+        "duration": 1535.6754825115204,
+        "avg_packet_size": 176.4644115574348,
+        "detection_time": 1535.6752715110779,
+        "timestamp": 1777043270.369776
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043270.4719715,
+        "total_packets_captured": 9993,
+        "total_bytes_captured": 1847008,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903244951,
+          "network_bytes_recv": 6527125249
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043270.4623392,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:08:00.585165",
+      "unix_timestamp": 1777043280.5851853,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 500944,
+        "packets": 2839,
+        "duration": 1545.8007354736328,
+        "avg_packet_size": 176.4508629799225,
+        "detection_time": 1545.7999753952026,
+        "timestamp": 1777043280.4950294
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043280.5972767,
+        "total_packets_captured": 9995,
+        "total_bytes_captured": 1847396,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903255697,
+          "network_bytes_recv": 6527135013
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043280.5852835,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:08:10.696652",
+      "unix_timestamp": 1777043290.6966736,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 501082,
+        "packets": 2840,
+        "duration": 1555.9096524715424,
+        "avg_packet_size": 176.43732394366197,
+        "detection_time": 1555.9095690250397,
+        "timestamp": 1777043290.603945
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043290.7067146,
+        "total_packets_captured": 9997,
+        "total_bytes_captured": 1847912,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903265584,
+          "network_bytes_recv": 6527144237
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043290.6967711,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:08:20.852724",
+      "unix_timestamp": 1777043300.8527417,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 501444,
+        "packets": 2841,
+        "duration": 1566.053509235382,
+        "avg_packet_size": 176.5026399155227,
+        "detection_time": 1566.0533194541931,
+        "timestamp": 1777043300.747803
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043300.865136,
+        "total_packets_captured": 9998,
+        "total_bytes_captured": 1848274,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.2,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903276995,
+          "network_bytes_recv": 6527156741
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043300.85284,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:08:30.974002",
+      "unix_timestamp": 1777043310.9740212,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 501582,
+        "packets": 2842,
+        "duration": 1576.1860938072205,
+        "avg_packet_size": 176.48909218859959,
+        "detection_time": 1576.1859312057495,
+        "timestamp": 1777043310.8803873
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043310.9838989,
+        "total_packets_captured": 10000,
+        "total_bytes_captured": 1848646,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903288489,
+          "network_bytes_recv": 6527187110
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043310.9740534,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:08:41.127620",
+      "unix_timestamp": 1777043321.1276283,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 501816,
+        "packets": 2843,
+        "duration": 1586.339273929596,
+        "avg_packet_size": 176.50932113964123,
+        "detection_time": 1586.3389523029327,
+        "timestamp": 1777043321.0335677
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043321.1388938,
+        "total_packets_captured": 10001,
+        "total_bytes_captured": 1848880,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903328809,
+          "network_bytes_recv": 6527234571
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043321.1276474,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:08:51.309974",
+      "unix_timestamp": 1777043331.30999,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 501954,
+        "packets": 2844,
+        "duration": 1596.464334487915,
+        "avg_packet_size": 176.4957805907173,
+        "detection_time": 1596.4641423225403,
+        "timestamp": 1777043331.1586287
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043331.2610624,
+        "total_packets_captured": 10003,
+        "total_bytes_captured": 1849252,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.4,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903357000,
+          "network_bytes_recv": 6527262042
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043331.3100345,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:09:01.388818",
+      "unix_timestamp": 1777043341.3888354,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 502120,
+        "packets": 2845,
+        "duration": 1606.5901708602905,
+        "avg_packet_size": 176.4920913884007,
+        "detection_time": 1606.590062379837,
+        "timestamp": 1777043341.2844632
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043341.3904064,
+        "total_packets_captured": 10007,
+        "total_bytes_captured": 1850257,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903370096,
+          "network_bytes_recv": 6527273895
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043341.388866,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:09:11.510386",
+      "unix_timestamp": 1777043351.5104098,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 502272,
+        "packets": 2846,
+        "duration": 1616.7202575206757,
+        "avg_packet_size": 176.48348559381589,
+        "detection_time": 1616.7184705734253,
+        "timestamp": 1777043351.414552
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043351.5176451,
+        "total_packets_captured": 10010,
+        "total_bytes_captured": 1850727,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903380371,
+          "network_bytes_recv": 6527316550
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043351.5104392,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:09:21.672211",
+      "unix_timestamp": 1777043361.6722221,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 502490,
+        "packets": 2847,
+        "duration": 1626.858817100525,
+        "avg_packet_size": 176.49806814190376,
+        "detection_time": 1626.8587646484375,
+        "timestamp": 1777043361.5531092
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043361.6723506,
+        "total_packets_captured": 10012,
+        "total_bytes_captured": 1851197,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903401807,
+          "network_bytes_recv": 6527348398
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043361.672257,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:09:31.786714",
+      "unix_timestamp": 1777043371.786727,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 502708,
+        "packets": 2848,
+        "duration": 1636.9984965324402,
+        "avg_packet_size": 176.5126404494382,
+        "detection_time": 1636.9983339309692,
+        "timestamp": 1777043371.6927896
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043371.794854,
+        "total_packets_captured": 10015,
+        "total_bytes_captured": 1851680,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903414136,
+          "network_bytes_recv": 6527360026
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043371.7868152,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:09:41.990071",
+      "unix_timestamp": 1777043381.9901104,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 502846,
+        "packets": 2849,
+        "duration": 1647.1847140789032,
+        "avg_packet_size": 176.4991224991225,
+        "detection_time": 1647.1844799518585,
+        "timestamp": 1777043381.8790064
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043381.9814453,
+        "total_packets_captured": 10026,
+        "total_bytes_captured": 1854639,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903427340,
+          "network_bytes_recv": 6527380282
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043381.9902384,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:09:52.104569",
+      "unix_timestamp": 1777043392.10458,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 502984,
+        "packets": 2850,
+        "duration": 1657.3086490631104,
+        "avg_packet_size": 176.4856140350877,
+        "detection_time": 1657.3085341453552,
+        "timestamp": 1777043392.0029414
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043392.1069307,
+        "total_packets_captured": 10028,
+        "total_bytes_captured": 1854995,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903438312,
+          "network_bytes_recv": 6527393202
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043392.1046035,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:10:02.241763",
+      "unix_timestamp": 1777043402.2417746,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 503150,
+        "packets": 2851,
+        "duration": 1667.4418749809265,
+        "avg_packet_size": 176.48193616274992,
+        "detection_time": 1667.441786289215,
+        "timestamp": 1777043402.1361675
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043402.2420874,
+        "total_packets_captured": 10030,
+        "total_bytes_captured": 1855823,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903450626,
+          "network_bytes_recv": 6527404675
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043402.24201,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:10:12.397440",
+      "unix_timestamp": 1777043412.3974497,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 503302,
+        "packets": 2852,
+        "duration": 1677.5918731689453,
+        "avg_packet_size": 176.47335203366057,
+        "detection_time": 1677.5917856693268,
+        "timestamp": 1777043412.2861655
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043412.3912654,
+        "total_packets_captured": 10033,
+        "total_bytes_captured": 1856293,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903462697,
+          "network_bytes_recv": 6527425450
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043412.397485,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 1,
+      "timestamp": "2026-04-24T12:10:22.519206",
+      "unix_timestamp": 1777043422.519229,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 503520,
+        "packets": 2853,
+        "duration": 1687.7199800014496,
+        "avg_packet_size": 176.48790746582546,
+        "detection_time": 1687.7199251651764,
+        "timestamp": 1777043422.4142723
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043422.5163636,
+        "total_packets_captured": 10035,
+        "total_bytes_captured": 1856756,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903474115,
+          "network_bytes_recv": 6527436502
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043422.519273,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:10:32.653897",
+      "unix_timestamp": 1777043432.6539142,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 503738,
+        "packets": 2854,
+        "duration": 1697.8433952331543,
+        "avg_packet_size": 176.50245269796775,
+        "detection_time": 1697.843005180359,
+        "timestamp": 1777043432.5376894
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043432.6497006,
+        "total_packets_captured": 10037,
+        "total_bytes_captured": 1857112,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903485039,
+          "network_bytes_recv": 6527446630
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043432.6539454,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:10:42.797387",
+      "unix_timestamp": 1777043442.797404,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 503904,
+        "packets": 2855,
+        "duration": 1707.9870398044586,
+        "avg_packet_size": 176.49877408056042,
+        "detection_time": 1707.9869887828827,
+        "timestamp": 1777043442.681332
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043442.7992618,
+        "total_packets_captured": 10041,
+        "total_bytes_captured": 1857564,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903494478,
+          "network_bytes_recv": 6527464535
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043442.797428,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:10:52.928308",
+      "unix_timestamp": 1777043452.9283185,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 504056,
+        "packets": 2856,
+        "duration": 1718.1349565982819,
+        "avg_packet_size": 176.49019607843138,
+        "detection_time": 1718.1348176002502,
+        "timestamp": 1777043452.829249
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043452.9319818,
+        "total_packets_captured": 10044,
+        "total_bytes_captured": 1858034,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903505319,
+          "network_bytes_recv": 6527476646
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043452.9284139,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:11:03.096187",
+      "unix_timestamp": 1777043463.0962012,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 504194,
+        "packets": 2857,
+        "duration": 1728.2925736904144,
+        "avg_packet_size": 176.4767238361918,
+        "detection_time": 1728.2925171852112,
+        "timestamp": 1777043462.986866
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043463.0888765,
+        "total_packets_captured": 10047,
+        "total_bytes_captured": 1858464,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903527436,
+          "network_bytes_recv": 6527499104
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043463.0963097,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:11:13.269389",
+      "unix_timestamp": 1777043473.269437,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 504332,
+        "packets": 2858,
+        "duration": 1738.467963218689,
+        "avg_packet_size": 176.46326102169348,
+        "detection_time": 1738.4678130149841,
+        "timestamp": 1777043473.1622558
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043473.2644804,
+        "total_packets_captured": 10055,
+        "total_bytes_captured": 1861013,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903552655,
+          "network_bytes_recv": 6527523550
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043473.2700193,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:11:23.424590",
+      "unix_timestamp": 1777043483.4246104,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 504550,
+        "packets": 2859,
+        "duration": 1748.6331527233124,
+        "avg_packet_size": 176.47778943686603,
+        "detection_time": 1748.6322741508484,
+        "timestamp": 1777043483.327447
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043483.430127,
+        "total_packets_captured": 10059,
+        "total_bytes_captured": 1861595,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903564572,
+          "network_bytes_recv": 6527535231
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043483.4246526,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:11:33.650105",
+      "unix_timestamp": 1777043493.6503975,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 504768,
+        "packets": 2860,
+        "duration": 1758.8037164211273,
+        "avg_packet_size": 176.4923076923077,
+        "detection_time": 1758.8036670684814,
+        "timestamp": 1777043493.4980085
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043493.6022344,
+        "total_packets_captured": 10061,
+        "total_bytes_captured": 1861951,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903574332,
+          "network_bytes_recv": 6527550323
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043493.6504881,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:11:43.750314",
+      "unix_timestamp": 1777043503.750331,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 504834,
+        "packets": 2861,
+        "duration": 1768.9286427497864,
+        "avg_packet_size": 176.4536875218455,
+        "detection_time": 1768.9285917282104,
+        "timestamp": 1777043503.622935
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043503.723743,
+        "total_packets_captured": 10064,
+        "total_bytes_captured": 1862221,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.6,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903587483,
+          "network_bytes_recv": 6527563075
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043503.7503567,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:11:53.855713",
+      "unix_timestamp": 1777043513.8557246,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 504972,
+        "packets": 2862,
+        "duration": 1779.047875404358,
+        "avg_packet_size": 176.44025157232704,
+        "detection_time": 1779.0474824905396,
+        "timestamp": 1777043513.7421696
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043513.8445177,
+        "total_packets_captured": 10066,
+        "total_bytes_captured": 1862705,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 4.9,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903597264,
+          "network_bytes_recv": 6527580138
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043513.8558857,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:12:03.965509",
+      "unix_timestamp": 1777043523.9655206,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 505046,
+        "packets": 2863,
+        "duration": 1789.1738798618317,
+        "avg_packet_size": 176.4044708347887,
+        "detection_time": 1789.1736645698547,
+        "timestamp": 1777043523.8681738
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043523.9706118,
+        "total_packets_captured": 10068,
+        "total_bytes_captured": 1862853,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903607926,
+          "network_bytes_recv": 6527589850
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043523.965548,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:12:14.088883",
+      "unix_timestamp": 1777043534.088903,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 505112,
+        "packets": 2864,
+        "duration": 1799.2969880104065,
+        "avg_packet_size": 176.3659217877095,
+        "detection_time": 1799.2969388961792,
+        "timestamp": 1777043533.9912803
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043534.093528,
+        "total_packets_captured": 10072,
+        "total_bytes_captured": 1863912,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903617364,
+          "network_bytes_recv": 6527599312
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043534.0889318,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:12:24.221090",
+      "unix_timestamp": 1777043544.2211022,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 505178,
+        "packets": 2865,
+        "duration": 1809.4180011749268,
+        "avg_packet_size": 176.32739965095985,
+        "detection_time": 1809.4179437160492,
+        "timestamp": 1777043544.1122937
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043544.2145593,
+        "total_packets_captured": 10073,
+        "total_bytes_captured": 1863978,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903626135,
+          "network_bytes_recv": 6527607828
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043544.2211773,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:12:34.375737",
+      "unix_timestamp": 1777043554.3757539,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 505244,
+        "packets": 2866,
+        "duration": 1819.5758147239685,
+        "avg_packet_size": 176.28890439637124,
+        "detection_time": 1819.575629234314,
+        "timestamp": 1777043554.2701075
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043554.373517,
+        "total_packets_captured": 10075,
+        "total_bytes_captured": 1864278,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.4,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903635806,
+          "network_bytes_recv": 6527626823
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043554.376303,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 2,
+      "timestamp": "2026-04-24T12:12:44.500040",
+      "unix_timestamp": 1777043564.5000587,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 505382,
+        "packets": 2867,
+        "duration": 1829.698365688324,
+        "avg_packet_size": 176.2755493547262,
+        "detection_time": 1829.6981763839722,
+        "timestamp": 1777043564.3926592
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043564.49488,
+        "total_packets_captured": 10078,
+        "total_bytes_captured": 1864916,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903645403,
+          "network_bytes_recv": 6527636353
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043564.5002222,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:12:54.792595",
+      "unix_timestamp": 1777043574.7926044,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 505448,
+        "packets": 2868,
+        "duration": 1839.99644947052,
+        "avg_packet_size": 176.2370990237099,
+        "detection_time": 1839.9960939884186,
+        "timestamp": 1777043574.6907434
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043574.79905,
+        "total_packets_captured": 10079,
+        "total_bytes_captured": 1864982,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.4,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903657574,
+          "network_bytes_recv": 6527655217
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043574.792647,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:13:04.928468",
+      "unix_timestamp": 1777043584.9284797,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 505698,
+        "packets": 2869,
+        "duration": 1850.12242770195,
+        "avg_packet_size": 176.2628093412339,
+        "detection_time": 1850.1217226982117,
+        "timestamp": 1777043584.8167217
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043584.9226947,
+        "total_packets_captured": 10080,
+        "total_bytes_captured": 1865232,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903667557,
+          "network_bytes_recv": 6527664266
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043584.9285145,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:13:15.054609",
+      "unix_timestamp": 1777043595.054631,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 505764,
+        "packets": 2870,
+        "duration": 1860.2498989105225,
+        "avg_packet_size": 176.22439024390243,
+        "detection_time": 1860.2495048046112,
+        "timestamp": 1777043594.9441924
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043595.0583055,
+        "total_packets_captured": 10081,
+        "total_bytes_captured": 1865298,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.2,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903679109,
+          "network_bytes_recv": 6527674619
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043595.0547473,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:13:25.215522",
+      "unix_timestamp": 1777043605.215532,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 505902,
+        "packets": 2871,
+        "duration": 1870.380187511444,
+        "avg_packet_size": 176.2110762800418,
+        "detection_time": 1870.378839969635,
+        "timestamp": 1777043605.0744824
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043605.2064073,
+        "total_packets_captured": 10083,
+        "total_bytes_captured": 1865670,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.0,
+          "memory_percent": 34.3,
+          "network_bytes_sent": 2903692564,
+          "network_bytes_recv": 6527694445
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043605.2155738,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:13:35.321040",
+      "unix_timestamp": 1777043615.3210568,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506040,
+        "packets": 2872,
+        "duration": 1880.5280816555023,
+        "avg_packet_size": 176.19777158774374,
+        "detection_time": 1880.5277926921844,
+        "timestamp": 1777043615.222374
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043615.325975,
+        "total_packets_captured": 10085,
+        "total_bytes_captured": 1866058,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 5.1,
+          "memory_percent": 34.3,
+          "network_bytes_sent": 2903704767,
+          "network_bytes_recv": 6527713344
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043615.3210926,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:13:45.453550",
+      "unix_timestamp": 1777043625.4535613,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506178,
+        "packets": 2873,
+        "duration": 1890.6504480838776,
+        "avg_packet_size": 176.18447615732683,
+        "detection_time": 1890.6502540111542,
+        "timestamp": 1777043625.3447416
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043625.4469395,
+        "total_packets_captured": 10087,
+        "total_bytes_captured": 1866446,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.3,
+          "network_bytes_sent": 2903715433,
+          "network_bytes_recv": 6527722806
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043625.4536102,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:13:55.734494",
+      "unix_timestamp": 1777043635.7345026,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506244,
+        "packets": 2874,
+        "duration": 1900.901427745819,
+        "avg_packet_size": 176.14613778705638,
+        "detection_time": 1900.9011402130127,
+        "timestamp": 1777043635.5957217
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043635.7392285,
+        "total_packets_captured": 10088,
+        "total_bytes_captured": 1866512,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.3,
+          "network_bytes_sent": 2903724598,
+          "network_bytes_recv": 6527748675
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043635.7345352,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:14:06.089279",
+      "unix_timestamp": 1777043646.0893276,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506382,
+        "packets": 2875,
+        "duration": 1911.191278219223,
+        "avg_packet_size": 176.1328695652174,
+        "detection_time": 1911.191209077835,
+        "timestamp": 1777043645.8855705
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043646.0830476,
+        "total_packets_captured": 10090,
+        "total_bytes_captured": 1866900,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 1.3,
+          "memory_percent": 34.3,
+          "network_bytes_sent": 2903736889,
+          "network_bytes_recv": 6527763135
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043646.0893805,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:14:16.204964",
+      "unix_timestamp": 1777043656.2049863,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506520,
+        "packets": 2876,
+        "duration": 1921.4018607139587,
+        "avg_packet_size": 176.11961057023643,
+        "detection_time": 1921.4018108844757,
+        "timestamp": 1777043656.096153
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043656.1981587,
+        "total_packets_captured": 10092,
+        "total_bytes_captured": 1867304,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.3,
+          "network_bytes_sent": 2903746572,
+          "network_bytes_recv": 6527772467
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043656.2050347,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:14:26.324656",
+      "unix_timestamp": 1777043666.3246732,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506586,
+        "packets": 2877,
+        "duration": 1931.5201194286346,
+        "avg_packet_size": 176.0813347236705,
+        "detection_time": 1931.5192294120789,
+        "timestamp": 1777043666.2144148
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043666.3189006,
+        "total_packets_captured": 10094,
+        "total_bytes_captured": 1867620,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.3,
+          "network_bytes_sent": 2903766075,
+          "network_bytes_recv": 6527797321
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043666.3247888,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:14:36.444579",
+      "unix_timestamp": 1777043676.4445975,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506724,
+        "packets": 2878,
+        "duration": 1941.6412694454193,
+        "avg_packet_size": 176.06810284920084,
+        "detection_time": 1941.641182422638,
+        "timestamp": 1777043676.3355618
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043676.4380493,
+        "total_packets_captured": 10097,
+        "total_bytes_captured": 1868258,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 5.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903777113,
+          "network_bytes_recv": 6527814898
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043676.4446402,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:14:46.556743",
+      "unix_timestamp": 1777043686.5567558,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506790,
+        "packets": 2879,
+        "duration": 1951.7612047195435,
+        "avg_packet_size": 176.02987148315387,
+        "detection_time": 1951.7610108852386,
+        "timestamp": 1777043686.4554982
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043686.557827,
+        "total_packets_captured": 10098,
+        "total_bytes_captured": 1868324,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903789443,
+          "network_bytes_recv": 6527824512
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043686.5571635,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:14:56.701980",
+      "unix_timestamp": 1777043696.701995,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506856,
+        "packets": 2880,
+        "duration": 1961.8766345977783,
+        "avg_packet_size": 175.99166666666667,
+        "detection_time": 1961.87642121315,
+        "timestamp": 1777043696.5709283
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043696.6963842,
+        "total_packets_captured": 10099,
+        "total_bytes_captured": 1868390,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903799200,
+          "network_bytes_recv": 6527834434
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043696.7020326,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:15:06.824373",
+      "unix_timestamp": 1777043706.8243995,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 506994,
+        "packets": 2881,
+        "duration": 1972.021733045578,
+        "avg_packet_size": 175.97847969455051,
+        "detection_time": 1972.021033525467,
+        "timestamp": 1777043706.7160254
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043706.8234746,
+        "total_packets_captured": 10101,
+        "total_bytes_captured": 1868778,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903813462,
+          "network_bytes_recv": 6527853478
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043706.8244321,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 3,
+      "timestamp": "2026-04-24T12:15:16.953696",
+      "unix_timestamp": 1777043716.953719,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 507132,
+        "packets": 2882,
+        "duration": 1982.1493525505066,
+        "avg_packet_size": 175.96530187369882,
+        "detection_time": 1982.1489279270172,
+        "timestamp": 1777043716.8436465
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043716.94592,
+        "total_packets_captured": 10103,
+        "total_bytes_captured": 1869150,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.4,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903823113,
+          "network_bytes_recv": 6527862256
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043716.953761,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:15:27.075782",
+      "unix_timestamp": 1777043727.0757923,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 507198,
+        "packets": 2883,
+        "duration": 1992.2781157493591,
+        "avg_packet_size": 175.92715920915714,
+        "detection_time": 1992.2766962051392,
+        "timestamp": 1777043726.97241
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043727.0752223,
+        "total_packets_captured": 10104,
+        "total_bytes_captured": 1869216,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 5.1,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903834690,
+          "network_bytes_recv": 6527880838
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043727.0758317,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:15:37.211852",
+      "unix_timestamp": 1777043737.211879,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 507448,
+        "packets": 2884,
+        "duration": 2002.399687051773,
+        "avg_packet_size": 175.95284327323162,
+        "detection_time": 2002.3993945121765,
+        "timestamp": 1777043737.0939815
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043737.2022784,
+        "total_packets_captured": 10105,
+        "total_bytes_captured": 1869466,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903844913,
+          "network_bytes_recv": 6527898648
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043737.2119322,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:15:47.346358",
+      "unix_timestamp": 1777043747.3463843,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 507586,
+        "packets": 2885,
+        "duration": 2012.5230078697205,
+        "avg_packet_size": 175.93968804159445,
+        "detection_time": 2012.5216896533966,
+        "timestamp": 1777043747.2173028
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043747.319754,
+        "total_packets_captured": 10107,
+        "total_bytes_captured": 1869854,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903855529,
+          "network_bytes_recv": 6527907768
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043747.3464158,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:15:57.446683",
+      "unix_timestamp": 1777043757.446693,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 507652,
+        "packets": 2886,
+        "duration": 2022.6424424648285,
+        "avg_packet_size": 175.9015939015939,
+        "detection_time": 2022.642255306244,
+        "timestamp": 1777043757.336736
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043757.4392273,
+        "total_packets_captured": 10108,
+        "total_bytes_captured": 1869920,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 5.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903868090,
+          "network_bytes_recv": 6527919475
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043757.446726,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:16:07.560317",
+      "unix_timestamp": 1777043767.5603263,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 507790,
+        "packets": 2887,
+        "duration": 2032.7661621570587,
+        "avg_packet_size": 175.8884655351576,
+        "detection_time": 2032.7659752368927,
+        "timestamp": 1777043767.460456
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043767.5624573,
+        "total_packets_captured": 10111,
+        "total_bytes_captured": 1870590,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.6,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903881217,
+          "network_bytes_recv": 6527938052
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043767.560361,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:16:17.690143",
+      "unix_timestamp": 1777043777.6901531,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 507856,
+        "packets": 2888,
+        "duration": 2042.8897125720978,
+        "avg_packet_size": 175.85041551246536,
+        "detection_time": 2042.889455795288,
+        "timestamp": 1777043777.584005
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043777.684912,
+        "total_packets_captured": 10112,
+        "total_bytes_captured": 1870656,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903892431,
+          "network_bytes_recv": 6527947921
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043777.6901863,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:16:27.847234",
+      "unix_timestamp": 1777043787.847246,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 508090,
+        "packets": 2889,
+        "duration": 2053.0105628967285,
+        "avg_packet_size": 175.8705434406369,
+        "detection_time": 2053.009813785553,
+        "timestamp": 1777043787.7048576
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043787.8403451,
+        "total_packets_captured": 10113,
+        "total_bytes_captured": 1870890,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 1.9,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903899861,
+          "network_bytes_recv": 6527954393
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043787.847288,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:16:37.953567",
+      "unix_timestamp": 1777043797.953578,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 508324,
+        "packets": 2890,
+        "duration": 2063.1588661670685,
+        "avg_packet_size": 175.89065743944636,
+        "detection_time": 2063.1586632728577,
+        "timestamp": 1777043797.8531587
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043797.9552002,
+        "total_packets_captured": 10117,
+        "total_bytes_captured": 1871762,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903911034,
+          "network_bytes_recv": 6527964174
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043797.9536126,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:16:48.104637",
+      "unix_timestamp": 1777043808.1046653,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 508558,
+        "packets": 2891,
+        "duration": 2073.279355287552,
+        "avg_packet_size": 175.9107575233483,
+        "detection_time": 2073.2791409492493,
+        "timestamp": 1777043807.9736493
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043808.0895731,
+        "total_packets_captured": 10118,
+        "total_bytes_captured": 1871996,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903919905,
+          "network_bytes_recv": 6527971380
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043808.1047869,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:16:58.220432",
+      "unix_timestamp": 1777043818.2204537,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 508696,
+        "packets": 2892,
+        "duration": 2083.4118132591248,
+        "avg_packet_size": 175.89764868603044,
+        "detection_time": 2083.4117572307587,
+        "timestamp": 1777043818.1061056
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043818.209082,
+        "total_packets_captured": 10120,
+        "total_bytes_captured": 1872368,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903930225,
+          "network_bytes_recv": 6527989439
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043818.2204907,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:17:08.439431",
+      "unix_timestamp": 1777043828.439445,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 508770,
+        "packets": 2893,
+        "duration": 2093.608988046646,
+        "avg_packet_size": 175.86242654683718,
+        "detection_time": 2093.6080844402313,
+        "timestamp": 1777043828.303283
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043828.4052787,
+        "total_packets_captured": 10122,
+        "total_bytes_captured": 1872516,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903939104,
+          "network_bytes_recv": 6528005088
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043828.439473,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:17:18.577539",
+      "unix_timestamp": 1777043838.5775511,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 508836,
+        "packets": 2894,
+        "duration": 2103.7672793865204,
+        "avg_packet_size": 175.82446440912233,
+        "detection_time": 2103.7671444416046,
+        "timestamp": 1777043838.461572
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043838.5783331,
+        "total_packets_captured": 10126,
+        "total_bytes_captured": 1873576,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 4.3,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903948644,
+          "network_bytes_recv": 6528013594
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043838.577586,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 4,
+      "timestamp": "2026-04-24T12:17:28.716548",
+      "unix_timestamp": 1777043848.716572,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 508902,
+        "packets": 2895,
+        "duration": 2113.9025123119354,
+        "avg_packet_size": 175.78652849740934,
+        "detection_time": 2113.9023225307465,
+        "timestamp": 1777043848.596806
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043848.7156615,
+        "total_packets_captured": 10127,
+        "total_bytes_captured": 1873642,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903958970,
+          "network_bytes_recv": 6528022775
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043848.7166224,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 5,
+      "timestamp": "2026-04-24T12:17:38.862898",
+      "unix_timestamp": 1777043858.8629096,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 509136,
+        "packets": 2896,
+        "duration": 2124.067975759506,
+        "avg_packet_size": 175.80662983425415,
+        "detection_time": 2124.0677869319916,
+        "timestamp": 1777043858.7622697
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043858.8644702,
+        "total_packets_captured": 10128,
+        "total_bytes_captured": 1873876,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2903967218,
+          "network_bytes_recv": 6528037439
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043858.8630166,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 6,
+      "timestamp": "2026-04-24T12:17:49.012002",
+      "unix_timestamp": 1777043869.0120115,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 509274,
+        "packets": 2897,
+        "duration": 2134.217807531357,
+        "avg_packet_size": 175.79357956506732,
+        "detection_time": 2134.2176394462585,
+        "timestamp": 1777043868.9121
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043869.0142848,
+        "total_packets_captured": 10130,
+        "total_bytes_captured": 1874248,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 4.9,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903978298,
+          "network_bytes_recv": 6528048270
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043869.0120363,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 7,
+      "timestamp": "2026-04-24T12:17:59.137005",
+      "unix_timestamp": 1777043879.1370137,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 509412,
+        "packets": 2898,
+        "duration": 2144.340482234955,
+        "avg_packet_size": 175.78053830227742,
+        "detection_time": 2144.3400061130524,
+        "timestamp": 1777043879.034776
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043879.1370065,
+        "total_packets_captured": 10132,
+        "total_bytes_captured": 1874620,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903987905,
+          "network_bytes_recv": 6528056981
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043879.137047,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 8,
+      "timestamp": "2026-04-24T12:18:09.263558",
+      "unix_timestamp": 1777043889.2635796,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 509646,
+        "packets": 2899,
+        "duration": 2154.465803861618,
+        "avg_packet_size": 175.80062090375992,
+        "detection_time": 2154.465478181839,
+        "timestamp": 1777043889.1600978
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043889.262472,
+        "total_packets_captured": 10133,
+        "total_bytes_captured": 1874854,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2903998870,
+          "network_bytes_recv": 6528071646
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043889.2636244,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 9,
+      "timestamp": "2026-04-24T12:18:19.398992",
+      "unix_timestamp": 1777043899.399002,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 509784,
+        "packets": 2900,
+        "duration": 2164.6018390655518,
+        "avg_packet_size": 175.78758620689655,
+        "detection_time": 2164.6016883850098,
+        "timestamp": 1777043899.2961314
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043899.398134,
+        "total_packets_captured": 10135,
+        "total_bytes_captured": 1875226,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2904009383,
+          "network_bytes_recv": 6528083402
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043899.3990397,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 10,
+      "timestamp": "2026-04-24T12:18:29.539438",
+      "unix_timestamp": 1777043909.5394487,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 510018,
+        "packets": 2901,
+        "duration": 2174.7247157096863,
+        "avg_packet_size": 175.8076525336091,
+        "detection_time": 2174.724527835846,
+        "timestamp": 1777043909.4190092
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043909.5297437,
+        "total_packets_captured": 10136,
+        "total_bytes_captured": 1875460,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904018530,
+          "network_bytes_recv": 6528098496
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043909.539608,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 11,
+      "timestamp": "2026-04-24T12:18:39.653581",
+      "unix_timestamp": 1777043919.6535914,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 510156,
+        "packets": 2902,
+        "duration": 2184.856649875641,
+        "avg_packet_size": 175.7946243969676,
+        "detection_time": 2184.8564598560333,
+        "timestamp": 1777043919.5509439
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043919.6530778,
+        "total_packets_captured": 10138,
+        "total_bytes_captured": 1875832,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2904028345,
+          "network_bytes_recv": 6528108270
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043919.6537042,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 12,
+      "timestamp": "2026-04-24T12:18:49.780894",
+      "unix_timestamp": 1777043929.7809048,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 510294,
+        "packets": 2903,
+        "duration": 2194.9787039756775,
+        "avg_packet_size": 175.7816052359628,
+        "detection_time": 2194.9786512851715,
+        "timestamp": 1777043929.6729963
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043929.7809975,
+        "total_packets_captured": 10140,
+        "total_bytes_captured": 1876204,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.4,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2904041461,
+          "network_bytes_recv": 6528120943
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043929.7809393,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 13,
+      "timestamp": "2026-04-24T12:18:59.917529",
+      "unix_timestamp": 1777043939.9175372,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 510432,
+        "packets": 2904,
+        "duration": 2205.1218433380127,
+        "avg_packet_size": 175.76859504132233,
+        "detection_time": 2205.121734857559,
+        "timestamp": 1777043939.8161356
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043939.9183004,
+        "total_packets_captured": 10142,
+        "total_bytes_captured": 1876560,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.4,
+          "network_bytes_sent": 2904053308,
+          "network_bytes_recv": 6528131879
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043939.9175777,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 14,
+      "timestamp": "2026-04-24T12:19:10.035317",
+      "unix_timestamp": 1777043950.0353312,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 510570,
+        "packets": 2905,
+        "duration": 2215.239574432373,
+        "avg_packet_size": 175.75559380378658,
+        "detection_time": 2215.2395255565643,
+        "timestamp": 1777043949.9338665
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043950.0360365,
+        "total_packets_captured": 10145,
+        "total_bytes_captured": 1877008,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.6,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904063964,
+          "network_bytes_recv": 6528142234
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043950.0353658,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 15,
+      "timestamp": "2026-04-24T12:19:20.154096",
+      "unix_timestamp": 1777043960.1541147,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 510636,
+        "packets": 2906,
+        "duration": 2225.358333349228,
+        "avg_packet_size": 175.71782518926358,
+        "detection_time": 2225.358104944229,
+        "timestamp": 1777043960.052627
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043960.154826,
+        "total_packets_captured": 10146,
+        "total_bytes_captured": 1877074,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904073950,
+          "network_bytes_recv": 6528166191
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043960.154177,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 16,
+      "timestamp": "2026-04-24T12:19:30.273448",
+      "unix_timestamp": 1777043970.2734566,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 510702,
+        "packets": 2907,
+        "duration": 2235.478282690048,
+        "avg_packet_size": 175.68008255933952,
+        "detection_time": 2235.4780778884888,
+        "timestamp": 1777043970.1725762
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043970.2747946,
+        "total_packets_captured": 10147,
+        "total_bytes_captured": 1877140,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904086404,
+          "network_bytes_recv": 6528175776
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043970.2734897,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 17,
+      "timestamp": "2026-04-24T12:19:40.404288",
+      "unix_timestamp": 1777043980.4042993,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 510840,
+        "packets": 2908,
+        "duration": 2245.608805656433,
+        "avg_packet_size": 175.6671251719395,
+        "detection_time": 2245.60849237442,
+        "timestamp": 1777043980.3030999
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043980.4056783,
+        "total_packets_captured": 10149,
+        "total_bytes_captured": 1877512,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904107591,
+          "network_bytes_recv": 6528195279
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043980.404331,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 18,
+      "timestamp": "2026-04-24T12:19:50.614781",
+      "unix_timestamp": 1777043990.6147907,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 510978,
+        "packets": 2909,
+        "duration": 2255.807899236679,
+        "avg_packet_size": 175.65417669302167,
+        "detection_time": 2255.807849407196,
+        "timestamp": 1777043990.5021915
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777043990.6057668,
+        "total_packets_captured": 10151,
+        "total_bytes_captured": 1877884,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904117983,
+          "network_bytes_recv": 6528205367
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777043990.614816,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 19,
+      "timestamp": "2026-04-24T12:20:00.854879",
+      "unix_timestamp": 1777044000.8548956,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 511044,
+        "packets": 2910,
+        "duration": 2266.0389688014984,
+        "avg_packet_size": 175.61649484536082,
+        "detection_time": 2266.038336277008,
+        "timestamp": 1777044000.7332628
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044000.8452103,
+        "total_packets_captured": 10152,
+        "total_bytes_captured": 1877950,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.3,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904129188,
+          "network_bytes_recv": 6528215295
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044000.854931,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 20,
+      "timestamp": "2026-04-24T12:20:10.981008",
+      "unix_timestamp": 1777044010.9810266,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 511358,
+        "packets": 2911,
+        "duration": 2276.184067249298,
+        "avg_packet_size": 175.66403297835797,
+        "detection_time": 2276.183506965637,
+        "timestamp": 1777044010.878361
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044010.980908,
+        "total_packets_captured": 10153,
+        "total_bytes_captured": 1878264,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 4.9,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904138710,
+          "network_bytes_recv": 6528224873
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044010.9810796,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 21,
+      "timestamp": "2026-04-24T12:20:21.137801",
+      "unix_timestamp": 1777044021.1378255,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 511496,
+        "packets": 2912,
+        "duration": 2286.313363313675,
+        "avg_packet_size": 175.6510989010989,
+        "detection_time": 2286.3133039474487,
+        "timestamp": 1777044021.0076556
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044021.11016,
+        "total_packets_captured": 10156,
+        "total_bytes_captured": 1878886,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904151946,
+          "network_bytes_recv": 6528254326
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044021.1378531,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 22,
+      "timestamp": "2026-04-24T12:20:31.246421",
+      "unix_timestamp": 1777044031.2464304,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 511562,
+        "packets": 2913,
+        "duration": 2296.435038805008,
+        "avg_packet_size": 175.61345691726743,
+        "detection_time": 2296.43496632576,
+        "timestamp": 1777044031.129331
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044031.2440438,
+        "total_packets_captured": 10157,
+        "total_bytes_captured": 1878952,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.2,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904162957,
+          "network_bytes_recv": 6528264432
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044031.246455,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 23,
+      "timestamp": "2026-04-24T12:20:41.369425",
+      "unix_timestamp": 1777044041.3694484,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 511812,
+        "packets": 2914,
+        "duration": 2306.5719225406647,
+        "avg_packet_size": 175.63898421413865,
+        "detection_time": 2306.571366071701,
+        "timestamp": 1777044041.2662163
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044041.368774,
+        "total_packets_captured": 10158,
+        "total_bytes_captured": 1879202,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904172742,
+          "network_bytes_recv": 6528273403
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044041.3694737,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 24,
+      "timestamp": "2026-04-24T12:20:51.491628",
+      "unix_timestamp": 1777044051.491645,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 511950,
+        "packets": 2915,
+        "duration": 2316.6955935955048,
+        "avg_packet_size": 175.62607204116637,
+        "detection_time": 2316.695240020752,
+        "timestamp": 1777044051.3898864
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044051.4918544,
+        "total_packets_captured": 10160,
+        "total_bytes_captured": 1879590,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.6,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904184859,
+          "network_bytes_recv": 6528284500
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044051.4916987,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 25,
+      "timestamp": "2026-04-24T12:21:01.623493",
+      "unix_timestamp": 1777044061.6235044,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 512016,
+        "packets": 2916,
+        "duration": 2326.815505027771,
+        "avg_packet_size": 175.58847736625515,
+        "detection_time": 2326.8153173923492,
+        "timestamp": 1777044061.5097988
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044061.623797,
+        "total_packets_captured": 10161,
+        "total_bytes_captured": 1879656,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904193955,
+          "network_bytes_recv": 6528293482
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044061.6236136,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 26,
+      "timestamp": "2026-04-24T12:21:11.746483",
+      "unix_timestamp": 1777044071.7464957,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 512154,
+        "packets": 2917,
+        "duration": 2336.949136734009,
+        "avg_packet_size": 175.57559136098732,
+        "detection_time": 2336.9487755298615,
+        "timestamp": 1777044071.6434312
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044071.7466295,
+        "total_packets_captured": 10163,
+        "total_bytes_captured": 1880044,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904206144,
+          "network_bytes_recv": 6528311797
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044071.7465255,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 27,
+      "timestamp": "2026-04-24T12:21:22.107084",
+      "unix_timestamp": 1777044082.1071563,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 512220,
+        "packets": 2918,
+        "duration": 2347.0735476017,
+        "avg_packet_size": 175.53803975325565,
+        "detection_time": 2347.073362350464,
+        "timestamp": 1777044081.7678413
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044082.0958195,
+        "total_packets_captured": 10164,
+        "total_bytes_captured": 1880110,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.8,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904214962,
+          "network_bytes_recv": 6528328648
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044082.1072009,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 28,
+      "timestamp": "2026-04-24T12:21:32.218086",
+      "unix_timestamp": 1777044092.2180984,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 512470,
+        "packets": 2919,
+        "duration": 2357.4213783740997,
+        "avg_packet_size": 175.56354916067147,
+        "detection_time": 2357.4211733341217,
+        "timestamp": 1777044092.115672
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044092.2181208,
+        "total_packets_captured": 10165,
+        "total_bytes_captured": 1880360,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904228545,
+          "network_bytes_recv": 6528341610
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044092.2181437,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 29,
+      "timestamp": "2026-04-24T12:21:42.448390",
+      "unix_timestamp": 1777044102.4483986,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 512636,
+        "packets": 2920,
+        "duration": 2367.6516394615173,
+        "avg_packet_size": 175.56027397260274,
+        "detection_time": 2367.6514699459076,
+        "timestamp": 1777044102.3459318
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044102.4479845,
+        "total_packets_captured": 10167,
+        "total_bytes_captured": 1880744,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904241073,
+          "network_bytes_recv": 6528353126
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044102.448423,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 30,
+      "timestamp": "2026-04-24T12:21:52.573288",
+      "unix_timestamp": 1777044112.5733297,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 512702,
+        "packets": 2921,
+        "duration": 2377.768233537674,
+        "avg_packet_size": 175.52276617596712,
+        "detection_time": 2377.7681810855865,
+        "timestamp": 1777044112.4625256
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044112.564699,
+        "total_packets_captured": 10171,
+        "total_bytes_captured": 1881280,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.4,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904251092,
+          "network_bytes_recv": 6528363686
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044112.5733619,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 31,
+      "timestamp": "2026-04-24T12:22:02.784246",
+      "unix_timestamp": 1777044122.784263,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 512840,
+        "packets": 2922,
+        "duration": 2387.9828453063965,
+        "avg_packet_size": 175.50992470910336,
+        "detection_time": 2387.9827778339386,
+        "timestamp": 1777044122.6771376
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044122.7826436,
+        "total_packets_captured": 10173,
+        "total_bytes_captured": 1881668,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904261517,
+          "network_bytes_recv": 6528380316
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044122.7843037,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 32,
+      "timestamp": "2026-04-24T12:22:12.917725",
+      "unix_timestamp": 1777044132.9177372,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 512978,
+        "packets": 2923,
+        "duration": 2398.1193301677704,
+        "avg_packet_size": 175.4970920287376,
+        "detection_time": 2398.118908405304,
+        "timestamp": 1777044132.8136244
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044132.9162295,
+        "total_packets_captured": 10174,
+        "total_bytes_captured": 1881806,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904270859,
+          "network_bytes_recv": 6528389404
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044132.9178405,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 33,
+      "timestamp": "2026-04-24T12:22:23.041331",
+      "unix_timestamp": 1777044143.0413477,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 513052,
+        "packets": 2924,
+        "duration": 2408.2442860603333,
+        "avg_packet_size": 175.4623803009576,
+        "detection_time": 2408.2440593242645,
+        "timestamp": 1777044142.93858
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044143.0406458,
+        "total_packets_captured": 10176,
+        "total_bytes_captured": 1881954,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.6,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904282586,
+          "network_bytes_recv": 6528403355
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044143.041386,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 34,
+      "timestamp": "2026-04-24T12:22:33.187110",
+      "unix_timestamp": 1777044153.1871188,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 513118,
+        "packets": 2925,
+        "duration": 2418.3629112243652,
+        "avg_packet_size": 175.42495726495727,
+        "detection_time": 2418.362856388092,
+        "timestamp": 1777044153.0572035
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044153.1882465,
+        "total_packets_captured": 10180,
+        "total_bytes_captured": 1883014,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904291507,
+          "network_bytes_recv": 6528417524
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044153.1871603,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 35,
+      "timestamp": "2026-04-24T12:22:43.304608",
+      "unix_timestamp": 1777044163.304617,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 513184,
+        "packets": 2926,
+        "duration": 2428.5048904418945,
+        "avg_packet_size": 175.38755980861245,
+        "detection_time": 2428.504378557205,
+        "timestamp": 1777044163.1991847
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044163.3050597,
+        "total_packets_captured": 10181,
+        "total_bytes_captured": 1883080,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904301714,
+          "network_bytes_recv": 6528427506
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044163.3046484,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 36,
+      "timestamp": "2026-04-24T12:22:53.434139",
+      "unix_timestamp": 1777044173.4341514,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 513322,
+        "packets": 2927,
+        "duration": 2438.637645483017,
+        "avg_packet_size": 175.37478647078922,
+        "detection_time": 2438.6374802589417,
+        "timestamp": 1777044173.331938
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044173.434026,
+        "total_packets_captured": 10183,
+        "total_bytes_captured": 1883452,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904312481,
+          "network_bytes_recv": 6528442369
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044173.434261,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 37,
+      "timestamp": "2026-04-24T12:23:03.788001",
+      "unix_timestamp": 1777044183.7880108,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 513556,
+        "packets": 2928,
+        "duration": 2448.98917388916,
+        "avg_packet_size": 175.3948087431694,
+        "detection_time": 2448.988868713379,
+        "timestamp": 1777044183.6834679
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044183.7878141,
+        "total_packets_captured": 10184,
+        "total_bytes_captured": 1883686,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904321988,
+          "network_bytes_recv": 6528455829
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044183.7880442,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 38,
+      "timestamp": "2026-04-24T12:23:13.918268",
+      "unix_timestamp": 1777044193.918283,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 513694,
+        "packets": 2929,
+        "duration": 2459.114257335663,
+        "avg_packet_size": 175.3820416524411,
+        "detection_time": 2459.1136894226074,
+        "timestamp": 1777044193.8085501
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044193.9108963,
+        "total_packets_captured": 10188,
+        "total_bytes_captured": 1884462,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904333411,
+          "network_bytes_recv": 6528466116
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044193.9183218,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 39,
+      "timestamp": "2026-04-24T12:23:24.040417",
+      "unix_timestamp": 1777044204.0404277,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 513832,
+        "packets": 2930,
+        "duration": 2469.2442314624786,
+        "avg_packet_size": 175.36928327645052,
+        "detection_time": 2469.2439970970154,
+        "timestamp": 1777044203.9385242
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044204.040427,
+        "total_packets_captured": 10190,
+        "total_bytes_captured": 1884850,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904343838,
+          "network_bytes_recv": 6528476135
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044204.040475,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 40,
+      "timestamp": "2026-04-24T12:23:34.160150",
+      "unix_timestamp": 1777044214.1601622,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 513898,
+        "packets": 2931,
+        "duration": 2479.362673521042,
+        "avg_packet_size": 175.33196861139544,
+        "detection_time": 2479.3621592521667,
+        "timestamp": 1777044214.0570087
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044214.1589906,
+        "total_packets_captured": 10191,
+        "total_bytes_captured": 1884916,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904354855,
+          "network_bytes_recv": 6528494901
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044214.1602683,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 41,
+      "timestamp": "2026-04-24T12:23:44.313325",
+      "unix_timestamp": 1777044224.3133376,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 514164,
+        "packets": 2932,
+        "duration": 2489.4808485507965,
+        "avg_packet_size": 175.36289222373807,
+        "detection_time": 2489.4805216789246,
+        "timestamp": 1777044224.1751423
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044224.2775254,
+        "total_packets_captured": 10192,
+        "total_bytes_captured": 1885182,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904364868,
+          "network_bytes_recv": 6528505107
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044224.3134828,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 42,
+      "timestamp": "2026-04-24T12:23:54.406607",
+      "unix_timestamp": 1777044234.406621,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 514302,
+        "packets": 2933,
+        "duration": 2499.6047298908234,
+        "avg_packet_size": 175.35015342652574,
+        "detection_time": 2499.6046149730682,
+        "timestamp": 1777044234.2990224
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044234.401311,
+        "total_packets_captured": 10195,
+        "total_bytes_captured": 1885836,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.6,
+          "network_bytes_sent": 2904373892,
+          "network_bytes_recv": 6528521616
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044234.4071722,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 43,
+      "timestamp": "2026-04-24T12:24:04.522725",
+      "unix_timestamp": 1777044244.5227368,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 514368,
+        "packets": 2934,
+        "duration": 2509.7255704402924,
+        "avg_packet_size": 175.31288343558282,
+        "detection_time": 2509.724451303482,
+        "timestamp": 1777044244.419865
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044244.5235863,
+        "total_packets_captured": 10196,
+        "total_bytes_captured": 1885902,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904383920,
+          "network_bytes_recv": 6528531442
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044244.5227702,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 44,
+      "timestamp": "2026-04-24T12:24:14.737615",
+      "unix_timestamp": 1777044254.7376242,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 514506,
+        "packets": 2935,
+        "duration": 2519.938284635544,
+        "avg_packet_size": 175.30017035775128,
+        "detection_time": 2519.938235759735,
+        "timestamp": 1777044254.632577
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044254.7365813,
+        "total_packets_captured": 10198,
+        "total_bytes_captured": 1886290,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904396654,
+          "network_bytes_recv": 6528552119
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044254.7376597,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 45,
+      "timestamp": "2026-04-24T12:24:24.874819",
+      "unix_timestamp": 1777044264.8748431,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 514644,
+        "packets": 2936,
+        "duration": 2530.0766129493713,
+        "avg_packet_size": 175.2874659400545,
+        "detection_time": 2530.0764360427856,
+        "timestamp": 1777044264.7709055
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044264.8735867,
+        "total_packets_captured": 10200,
+        "total_bytes_captured": 1886662,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904405813,
+          "network_bytes_recv": 6528561470
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044264.8748906,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 46,
+      "timestamp": "2026-04-24T12:24:34.998446",
+      "unix_timestamp": 1777044274.998454,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 514782,
+        "packets": 2937,
+        "duration": 2540.1980345249176,
+        "avg_packet_size": 175.27477017364657,
+        "detection_time": 2540.197318315506,
+        "timestamp": 1777044274.892329
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044274.9987803,
+        "total_packets_captured": 10202,
+        "total_bytes_captured": 1887034,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904417824,
+          "network_bytes_recv": 6528581749
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044274.9984841,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 47,
+      "timestamp": "2026-04-24T12:24:45.117497",
+      "unix_timestamp": 1777044285.1175106,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 514848,
+        "packets": 2938,
+        "duration": 2550.3222637176514,
+        "avg_packet_size": 175.23757658270932,
+        "detection_time": 2550.3220720291138,
+        "timestamp": 1777044285.0165575
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044285.119609,
+        "total_packets_captured": 10203,
+        "total_bytes_captured": 1887100,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904439256,
+          "network_bytes_recv": 6528607477
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044285.1175447,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 48,
+      "timestamp": "2026-04-24T12:24:55.234503",
+      "unix_timestamp": 1777044295.2345212,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 515098,
+        "packets": 2939,
+        "duration": 2560.434907436371,
+        "avg_packet_size": 175.2630146308268,
+        "detection_time": 2560.433969259262,
+        "timestamp": 1777044295.1292017
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044295.2325644,
+        "total_packets_captured": 10204,
+        "total_bytes_captured": 1887350,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904449463,
+          "network_bytes_recv": 6528619335
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044295.2345464,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 49,
+      "timestamp": "2026-04-24T12:25:05.355114",
+      "unix_timestamp": 1777044305.355137,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 515236,
+        "packets": 2940,
+        "duration": 2570.5597202777863,
+        "avg_packet_size": 175.25034013605443,
+        "detection_time": 2570.5596582889557,
+        "timestamp": 1777044305.2540126
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044305.3561015,
+        "total_packets_captured": 10207,
+        "total_bytes_captured": 1887956,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904463299,
+          "network_bytes_recv": 6528659848
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044305.3551686,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 50,
+      "timestamp": "2026-04-24T12:25:15.478993",
+      "unix_timestamp": 1777044315.4790015,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 515374,
+        "packets": 2941,
+        "duration": 2580.681836605072,
+        "avg_packet_size": 175.23767426045563,
+        "detection_time": 2580.681127309799,
+        "timestamp": 1777044315.3761308
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044315.4786372,
+        "total_packets_captured": 10209,
+        "total_bytes_captured": 1888328,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904473334,
+          "network_bytes_recv": 6528678483
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044315.4790313,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 51,
+      "timestamp": "2026-04-24T12:25:25.598908",
+      "unix_timestamp": 1777044325.5989182,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 515440,
+        "packets": 2942,
+        "duration": 2590.8021697998047,
+        "avg_packet_size": 175.20054384772263,
+        "detection_time": 2590.80176115036,
+        "timestamp": 1777044325.4964638
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044325.5993955,
+        "total_packets_captured": 10210,
+        "total_bytes_captured": 1888394,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 2.5,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904486727,
+          "network_bytes_recv": 6528699679
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044325.5989523,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    },
+    {
+      "detection_id": 52,
+      "timestamp": "2026-04-24T12:25:35.734225",
+      "unix_timestamp": 1777044335.7342517,
+      "elephant_flow": {
+        "src_ip": "10.0.0.101",
+        "dst_ip": "10.0.0.108",
+        "bytes": 515506,
+        "packets": 2943,
+        "duration": 2600.92400431633,
+        "avg_packet_size": 175.16343866802583,
+        "detection_time": 2600.9237644672394,
+        "timestamp": 1777044335.618298
+      },
+      "agent_metrics": {
+        "agent_start_time": 1777041734.6843894,
+        "detection_timestamp": 1777044335.7305248,
+        "total_packets_captured": 10212,
+        "total_bytes_captured": 1888694,
+        "active_flows": 186,
+        "reported_flows": 0,
+        "system_metrics": {
+          "cpu_percent": 0.0,
+          "memory_percent": 34.5,
+          "network_bytes_sent": 2904498527,
+          "network_bytes_recv": 6528721070
+        }
+      },
+      "ollama_timing": {
+        "ollama_call_start": 1777044335.734447,
+        "ollama_duration_seconds": 600
+      },
+      "decision": {},
+      "error": "Timeout ap\u00f3s 600 segundos"
+    }
+  ]
+}
