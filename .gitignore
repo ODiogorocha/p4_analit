@@ -1,4 +1,4 @@
-venv/
-.env/
-tutorials/
-.makerc
+.env
+.venv
+venv
+__pycache__
